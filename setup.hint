@@ -1,0 +1,4 @@
+category: Video
+requires: cygwin fox14 ogle
+sdesc: "FOX Toolkit frontend for the Ogle DVD player"
+ldesc: "FOX Toolkit frontend for the Ogle DVD player"

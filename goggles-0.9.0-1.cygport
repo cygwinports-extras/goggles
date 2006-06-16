@@ -1,0 +1,26 @@
+DESCRIPTION="FOX Toolkit frontend for the Ogle DVD player"
+HOMEPAGE="http://www.fifthplanet.net/goggles.html"
+SRC_URI="http://www.fifthplanet.net/files/${P}.tar.bz2"
+
+DEPS_PATH="/usr/lib/ogle"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	export WANT_FOX=1.6
+	./gb || error
+	sed -e 's:\@location\@:/usr/lib/ogle:' scripts/goggles.in > scripts/goggles
+}
+
+src_install() {
+	cd ${B}
+	dobin scripts/goggles
+
+	exeinto /usr/lib/ogle
+	newexe src/goggles.exe ogle_gui_goggles.exe
+
+	domenu ${S}/desktop/${PN}.desktop
+	newicon ${S}/icons/goggleslogosmall.png goggles.png
+
+	dodoc ${S}/desktop/goggles_manual.pdf
+}
