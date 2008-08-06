@@ -1,4 +1,3 @@
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap goggles-0.9.0-orig/build/configdetect goggles-0.9.0/build/configdetect
 --- goggles-0.9.0-orig/build/configdetect	2006-04-02 09:11:29.000000000 -0500
 +++ goggles-0.9.0/build/configdetect	2006-05-15 21:54:24.732875000 -0500
 @@ -18,6 +18,8 @@
